@@ -1,0 +1,31 @@
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  font-family: Georgia, serif;
+  font-size: 24px; /* diperkecil dari 40px ke 24px */
+  font-weight: bold;
+}
+
+.yellow-circle {
+  width: 60px;   /* dari 100px jadi 60px */
+  height: 60px;
+  background-color: #FFD700; /* warna kuning emas */
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.logo-text {
+  position: relative;
+  z-index: 1;
+  padding-left: 47px; /* pas posisi agar cuma setengah 'M' yang masuk */
+  color: #000;
+}
+
+.first-letter {
+  position: relative;
+  z-index: 1;
+}
