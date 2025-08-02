@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Benefit;
 use App\Models\Category;
 use App\Models\Seller;
 use App\Models\Ticket;
@@ -30,7 +31,8 @@ class FrontController extends Controller
     // balon-terbang
     public function details(Ticket $ticket){
         // dd($ticket);
-        return view('front.details', compact('ticket'));
+        $benefits = Benefit::all();
+        return view('front.details', compact('ticket', 'benefits'));
     }
 
     public function category(Category $category){

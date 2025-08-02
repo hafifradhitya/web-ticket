@@ -98,30 +98,17 @@
                     </div>
                 </div>
             </section>
-            <section id="Travel-with-Juara" class="flex flex-col gap-[6px]">
+           <section id="Travel-with-Juara" class="flex flex-col gap-[6px]">
                 <h2 class="font-bold text-sm leading-[21px]">Get to Know</h2>
                 <div class="grid grid-cols-3 gap-3">
-                    <div class="flex flex-col items-center rounded-3xl p-[14px_16px] gap-3 text-center bg-[#13181D]">
-                        <img src="{{asset('assets/images/icons/security-card.svg')}}" class="w-9 h-9" alt="icon">
-                        <div>
-                            <h3 class="font-bold text-sm leading-[21px] text-white">Security</h3>
-                            <p class="text-xs leading-[18px] text-white">24/7 Support</p>
+                    @foreach ($benefits as $benefit)
+                        <div class="flex flex-col items-center rounded-3xl p-[14px_16px] gap-3 text-center bg-[#13181D]">
+                            <img src="{{ Storage::url($benefit->icon) }}" class="w-9 h-9" alt="icon">
+                            <div>
+                                <p class="text-xs leading-[18px] text-white">{{ $benefit->description }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col items-center rounded-3xl p-[14px_16px] gap-3 text-center bg-[#13181D]">
-                        <img src="{{asset('assets/images/icons/hospital.svg')}}" class="w-9 h-9" alt="icon">
-                        <div>
-                            <h3 class="font-bold text-sm leading-[21px] text-white">Insurance</h3>
-                            <p class="text-xs leading-[18px] text-white">Available</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-col items-center rounded-3xl p-[14px_16px] gap-3 text-center bg-[#13181D]">
-                        <img src="{{asset('assets/images/icons/lovely.svg')}}" class="w-9 h-9" alt="icon">
-                        <div>
-                            <h3 class="font-bold text-sm leading-[21px] text-white">Comfort</h3>
-                            <p class="text-xs leading-[18px] text-white">Easy Refund</p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </section>
             <section id="Management" class="flex flex-col gap-[6px]">
